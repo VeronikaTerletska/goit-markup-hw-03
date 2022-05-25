@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding-left: 215px;
   padding-right: 215px;
+
   background: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
@@ -47,11 +48,25 @@ p {
 }
 .container {
   width: 1200px;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid red;
 }
 /* Header for Studio and Portfolio*/
+.header {
+  background-color: var(--primary-background-color);
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.logo-header {
+  display: block;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 .logo-header {
   font-weight: 700;
   font-family: Raleway, sans-serif;
@@ -64,9 +79,25 @@ p {
 }
 .site-nav,
 .contacts-nav {
+  display: flex;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+/* .site-nav .item:not(:last-child),
+.contacts-nav .item:not(:last-child) {
+  margin-right: 50px;
+} */
+.site-nav .item + .item,
+.contacts-nav .item + .item {
+  margin-left: 40px;
+}
+.site-nav .link,
+.contacts-nav .link {
+  display: block;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .contacts-nav .link {
   color: var(--text-color);
@@ -83,10 +114,9 @@ p {
 }
 /* Main index.html*/
 /* Hero */
-.hero > .container {
+.hero {
   background: #2f303a;
   text-align: center;
-  margin-bottom: 94px;
 }
 .hero-title {
   font-weight: 900;
@@ -95,30 +125,37 @@ p {
   color: var(--white-text-color);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  max-width: 696px;
+  margin: 0px auto 30px;
 }
 .button-hero {
-  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  color: var(--white-text-color);
   letter-spacing: 0.06em;
+  background: var(--accent-color);
+  color: var(--white-text-color);
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid transparent;
   padding: 10px 32px;
   min-width: 200px;
-  /* display: flex; */
   align-items: center;
+}
+.button-hero:focus,
+.button-hero:hover {
+  visibility: hidden;
 }
 /* Specifics */
 /* What we do */
 .specifics {
   background: var(--primary-background-color);
-  margin-bottom: 94px;
+}
+.specifics > .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .section-title {
   font-weight: 700;
@@ -141,8 +178,10 @@ p {
   color: var(--text-color);
 }
 /* Our team */
-.team .container {
+.team {
   background: #f5f4fa;
+}
+.team .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -194,8 +233,10 @@ p {
   color: var(--text-color);
 }
 /* Footer for Studio and Portfolio*/
-.footer > .container {
+.footer {
   background: #2f303a;
+}
+.footer > .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }

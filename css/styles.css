@@ -9,9 +9,9 @@
   --card-set-gap: 30px;
 }
 body {
-  margin: 0;
+  /* margin: 0;
   padding-left: 215px;
-  padding-right: 215px;
+  padding-right: 215px; */
 
   background: var(--primary-background-color);
   color: var(--primary-text-color);
@@ -43,7 +43,9 @@ body {
 h1,
 h2,
 h3,
-p {
+h4,
+h5,
+h6 p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -52,27 +54,30 @@ img {
   max-width: 100%;
   height: auto;
 }
+.address {
+  font-style: normal;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   border: 1px solid red;
 }
 /*---------------Header for Studio and Portfolio*--------------------/
 /* LINE */
 .header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .main-nav {
   display: flex;
   align-items: center;
 }
 .logo-header {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  /* margin-top: 25px;
+  margin-bottom: 25px; */
 
   font-weight: 700;
   font-family: Raleway, sans-serif;
@@ -116,6 +121,10 @@ img {
 .contacts-nav .link.current {
   color: var(--title-text-color);
 }
+.contacts-nav .link:hover,
+.contacts-nav .link:focus {
+  color: var(--accent-color);
+}
 .site-nav,
 .contacts-nav {
   font-weight: 500;
@@ -124,9 +133,7 @@ img {
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
-.site-nav .link.current,
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
+.site-nav .link.current {
   color: var(--accent-color);
 }
 /*----------------- Main index.html*-----------------/
@@ -134,6 +141,8 @@ img {
 .hero {
   background: #2f303a;
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   max-width: 696px;
@@ -148,7 +157,7 @@ img {
 }
 .button-hero {
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: none;
   padding: 10px 32px;
   min-width: 200px;
   align-items: center;
@@ -159,20 +168,19 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--white-text-color);
   cursor: pointer;
 }
 .button-hero:focus,
 .button-hero:hover {
-  visibility: hidden;
+  background-color: var(--accent-color);
 }
 /*------------ Specifics---------------- */
 .specifics {
-  background: var(--primary-background-color);
+  padding-top: 94px;
 }
 .specifics > .container {
-  padding-top: 94px;
 }
 .section-title {
   margin-bottom: 50px;
@@ -207,6 +215,7 @@ img {
 }
 /*------------ What we do -----------------------------*/
 .work > .container {
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 .image-work {
@@ -236,7 +245,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .card-team {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .team-title {
   margin-bottom: 10px;
@@ -247,7 +256,7 @@ img {
   text-align: center;
 }
 .team-text {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 
   font-size: 16px;
   line-height: 1.19;
